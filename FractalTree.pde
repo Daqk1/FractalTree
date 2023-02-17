@@ -10,10 +10,14 @@ public void setup()
 public void draw() 
 {   
   background(0);   
-  stroke(0,255,0);   
+   stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));   
+  //stroke(#FFC0CB);
   line(500,680,500,800);   
   drawBranches(500,680,100 ,-PI/2);  //will add later 
 } 
+public void mousePressed(){
+  redraw();
+}
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
     double angle1 = angle + branchAngle +.3;
